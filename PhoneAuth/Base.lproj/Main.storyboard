@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AuthViewController" customModule="PhoneAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="406-3o-ooJ">
+                                <rect key="frame" x="16" y="418" width="382" height="60"/>
+                                <color key="backgroundColor" red="0.586574634775899" green="0.98845806827659899" blue="1" alpha="0.84227616947852757" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="asK-J1-X0t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Authorise"/>
+                                <connections>
+                                    <action selector="authTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXq-0Z-8ce"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.58425841583382543" blue="0.0015610056957801044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="406-3o-ooJ" secondAttribute="trailing" constant="16" id="L5H-Zq-IAL"/>
+                            <constraint firstItem="406-3o-ooJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lgM-Ij-tXA"/>
+                            <constraint firstItem="406-3o-ooJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pme-I3-qxw"/>
+                            <constraint firstItem="406-3o-ooJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xEc-ls-1dx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="113"/>
+        </scene>
+        <!--Phone NumberVC-->
+        <scene sceneID="f8k-I5-3DO">
+            <objects>
+                <viewController storyboardIdentifier="PhoneNumberVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bCk-Tq-m5p" customClass="PhoneNumberVC" customModule="PhoneAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vPJ-3a-OVk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CP3-bR-T3v">
+                                <rect key="frame" x="16" y="277.5" width="382" height="161.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8II-aB-lxR">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gya-sJ-b8Z" customClass="FPNTextField" customModule="FlagPhoneNumber">
+                                        <rect key="frame" x="0.0" y="41.5" width="382" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="egc-oo-zoq"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN0-bQ-guc">
+                                        <rect key="frame" x="0.0" y="101.5" width="382" height="60"/>
+                                        <color key="backgroundColor" red="0.58657463480000005" green="0.98845806830000005" blue="1" alpha="0.84227616949999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="NUV-4S-0Td"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                        <state key="normal" title="Send code"/>
+                                        <connections>
+                                            <action selector="sendCodeAction:" destination="bCk-Tq-m5p" eventType="touchUpInside" id="c98-9L-KPq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CP3-bR-T3v" firstAttribute="leading" secondItem="DmL-TB-GrJ" secondAttribute="leading" constant="16" id="OmW-BG-BEf"/>
+                            <constraint firstItem="CP3-bR-T3v" firstAttribute="centerY" secondItem="vPJ-3a-OVk" secondAttribute="centerY" multiplier="0.8" id="UNd-SS-IQa"/>
+                            <constraint firstItem="DmL-TB-GrJ" firstAttribute="trailing" secondItem="CP3-bR-T3v" secondAttribute="trailing" constant="16" id="eOo-7k-ZYg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DmL-TB-GrJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneTextField" destination="Gya-sJ-b8Z" id="y1N-8L-40U"/>
+                        <outlet property="sendCodeOutlet" destination="kN0-bQ-guc" id="ytS-wK-kiS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uG-cB-LQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="113"/>
+        </scene>
+        <!--Code ValidVC-->
+        <scene sceneID="u68-DL-1Jf">
+            <objects>
+                <viewController storyboardIdentifier="CodeValidVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGI-pU-CJ0" customClass="CodeValidVC" customModule="PhoneAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpo-RX-4SD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-dD-H69">
+                                <rect key="frame" x="16" y="270" width="382" height="176.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYK-3e-ZBQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="28J-H8-vRt">
+                                        <rect key="frame" x="0.0" y="41.5" width="382" height="60"/>
+                                        <color key="backgroundColor" red="0.99543416538627838" green="1" blue="0.93405736434993158" alpha="0.50928633052147243" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="KAY-NN-3Ze"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="phonePad"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yes-Z6-ncZ">
+                                        <rect key="frame" x="0.0" y="116.5" width="382" height="60"/>
+                                        <color key="backgroundColor" red="0.77840590480000005" green="1" blue="0.89851230380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="VJB-HX-bvb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <state key="normal" title="Verify code"/>
+                                        <connections>
+                                            <action selector="checkCodeTapped:" destination="fGI-pU-CJ0" eventType="touchUpInside" id="LEa-fK-TW4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aYZ-dD-H69" firstAttribute="centerY" secondItem="dpo-RX-4SD" secondAttribute="centerY" multiplier="0.8" id="2BB-0u-Uer"/>
+                            <constraint firstItem="Nvg-4g-RWn" firstAttribute="trailing" secondItem="aYZ-dD-H69" secondAttribute="trailing" constant="16" id="Cel-Eq-Eq1"/>
+                            <constraint firstItem="aYZ-dD-H69" firstAttribute="leading" secondItem="Nvg-4g-RWn" secondAttribute="leading" constant="16" id="JTS-Qf-MdA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nvg-4g-RWn"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkCodeButton" destination="Yes-Z6-ncZ" id="fPL-Rb-jmH"/>
+                        <outlet property="codeTextView" destination="28J-H8-vRt" id="Eig-TH-1NT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Maf-LZ-dDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="113"/>
+        </scene>
+        <!--ContentVC-->
+        <scene sceneID="ZWg-1n-ntI">
+            <objects>
+                <viewController storyboardIdentifier="ContentVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5kP-eL-A9S" customClass="ContentVC" customModule="PhoneAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dlq-jR-32f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68C-OU-QMh">
+                                <rect key="frame" x="16" y="418" width="382" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.51875239647239269" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Vbm-Mb-8YI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOut" destination="5kP-eL-A9S" eventType="touchUpInside" id="7KT-L4-xX9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ee-kW-Sbj">
+                                <rect key="frame" x="157" y="257" width="100.5" height="27"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="68C-OU-QMh" firstAttribute="top" secondItem="2ee-kW-Sbj" secondAttribute="bottom" constant="134" id="Lk4-KG-bfr"/>
+                            <constraint firstItem="68C-OU-QMh" firstAttribute="leading" secondItem="dVO-PG-JCb" secondAttribute="leading" constant="16" id="RUP-1Q-PA2"/>
+                            <constraint firstItem="68C-OU-QMh" firstAttribute="centerY" secondItem="Dlq-jR-32f" secondAttribute="centerY" id="THC-GU-ydD"/>
+                            <constraint firstItem="2ee-kW-Sbj" firstAttribute="centerX" secondItem="Dlq-jR-32f" secondAttribute="centerX" id="g0J-0n-KwC"/>
+                            <constraint firstItem="dVO-PG-JCb" firstAttribute="trailing" secondItem="68C-OU-QMh" secondAttribute="trailing" constant="16" id="oBF-Uv-aO2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dVO-PG-JCb"/>
+                    </view>
+                    <connections>
+                        <segue destination="Su3-AJ-EIj" kind="unwind" identifier="closeSeque" unwindAction="closeSegue:" id="Tae-jk-110"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHY-4D-ReU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Su3-AJ-EIj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2693" y="109"/>
+        </scene>
+    </scenes>
+</document>
